@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package unknown;
+
+option go_package = "unknown/grpc/proto";
+
+service complicated {
+    rpc Random(Empty) returns (Value) {}
+ }
+
+message Empty {
+}
+
+message Value {
+    int32 value = 1;
+}
