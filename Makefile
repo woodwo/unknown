@@ -30,7 +30,7 @@ install-lint: # Install linter
 .PHONY: lint
 lint: install-lint $(GOBIN) # Run linter
 	$(info $(M) running linter...)
-	@golangci-lint run
+	@GOBIN=$(GOBIN) golangci-lint run
 
 .PHONY: build
 build: 
